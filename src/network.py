@@ -31,9 +31,9 @@ class Network(object):
         ever used in computing the outputs from later layers."""
         self.num_layers = len(sizes)
         self.sizes = sizes
-        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        self.biases = [np.random.randn(y,1) for y in sizes[1:]]# each neuron in the neural network has a bias except input layer neurons
         self.weights = [np.random.randn(y, x)
-                        for x, y in zip(sizes[:-1], sizes[1:])]
+                        for x, y in zip(sizes[:-1], sizes[1:])] # creates a matrix of weights for each layer
 
     def feedforward(self, a):
         """Return the output of the network if ``a`` is input."""
