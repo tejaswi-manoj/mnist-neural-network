@@ -4,6 +4,10 @@ import network
 # Load the MNIST dataset
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
 
+training_data = list(training_data)
+validation_data = list(validation_data)
+test_data = list(test_data)
+
 # Initialize the network with:
 # 784 input neurons (28x28 pixels),
 # 30 hidden neurons,
